@@ -1,3 +1,48 @@
-<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M17 34C26.3888 34 34 26.3888 34 17C34 7.61116 26.3888 0 17 0C7.61114 0 0 7.61116 0 17C0 26.3888 7.61114 34 17 34ZM22.3034 7.91931C22.5616 7.00234 21.6717 6.46011 20.859 7.0391L9.51415 15.1211C8.63278 15.749 8.77142 17 9.7224 17H12.7098V16.9768H18.5321L13.788 18.6508L11.6966 26.0807C11.4385 26.9977 12.3282 27.5399 13.141 26.9609L24.4859 18.8789C25.3672 18.251 25.2285 17 24.2776 17H19.7473L22.3034 7.91931Z" fill="#0260FF"/>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4CAF50"/>
+            <stop offset="100%" stop-color="#2196F3"/>
+        </linearGradient>
+        
+        <style type="text/css">
+            <![CDATA[
+                .pulse {
+                    animation: pulse 2s ease-in-out infinite;
+                    transform-origin: center;
+                }
+                .blink {
+                    animation: blink 1.5s ease-in-out infinite;
+                }
+                @keyframes pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.05); }
+                }
+                @keyframes blink {
+                    0%, 50% { opacity: 1; }
+                    51%, 100% { opacity: 0.3; }
+                }
+            ]]>
+        </style>
+    </defs>
+    
+    <!-- Brain/Circuit Base -->
+    <ellipse class="pulse" cx="16" cy="16" rx="16" ry="12.8" fill="url(#gradient)"/>
+    
+    <!-- Circuit Lines -->
+    <g transform="translate(5, 5)">
+        <!-- Line 1 -->
+        <rect x="3" y="6" width="12" height="1.5" rx="1" transform="rotate(45 9 6.75)" fill="white"/>
+        
+        <!-- Line 2 -->
+        <rect x="5" y="12" width="9" height="1.5" rx="1" transform="rotate(-30 9.5 12.75)" fill="white"/>
+        
+        <!-- Line 3 -->
+        <rect x="2" y="17" width="11" height="1.5" rx="1" transform="rotate(60 7.5 17.75)" fill="white"/>
+        
+        <!-- Dots -->
+        <circle class="blink" cx="9" cy="5" r="1.25" fill="white"/>
+        <circle class="blink" cx="15" cy="11" r="1.25" fill="white"/>
+        <circle class="blink" cx="6" cy="17" r="1.25" fill="white" style="animation-delay: 0.5s"/>
+    </g>
 </svg>
