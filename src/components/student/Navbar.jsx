@@ -17,8 +17,12 @@ const isCourseListPage = location.pathname.includes('/course-list');
         <button className='bg-blue-600 text-white px-5 py-2 rounded-full'>Create Account</button>
       </div>
       {/* For Phone screens */}
-      <div className='md:hidden'>
-         
+      <div className='md:hidden flex items-centergap-2 sm:gap-5 text-gray-500'>
+         <div>
+         <button>Become Educator</button>
+          | <Link to='/my-enrollments'> My Enrollments</Link>
+         </div>
+         <button><img src={assets.user_icon} alt="" /></button>
       </div>
     </div>
   )
